@@ -15,6 +15,7 @@
         <h2>1. Color changer</h2>
         <button id="gray_button">Gray</button>
         <button id="blue_button">Blue</button>
+        <button id="pink_button">Pink</button>
         <div id="color_box" class="gray"></div>        
         <script>
             const gray_button = document.getElementById("gray_button");
@@ -22,9 +23,12 @@
             const color_box = document.getElementById("color_box");
             gray_button.onclick = function() {
                 color_box.className = "gray";
-            };
+            }
             blue_button.onclick = function () {
                 color_box.className = "blue";
+            }
+            pink_button.onclick = function(){
+                color_box.className = "pink"
             }
             /* TODO 1
              *
@@ -43,6 +47,8 @@
             const counter_button = document.getElementById("counter_button");
             const countspan = document.getElementById("countspan");
             counter_button.onclick = function() {
+                count++;
+                countspan.textContent = count;
                 /* TODO 2
                  *
                  * Fill in this function so that it increments
@@ -60,6 +66,12 @@
         <script>
             const even_or_odd_button = document.getElementById("even_or_odd_button");
             even_or_odd_button.onclick = function() {
+                evenTest = count % 2;
+                if(evenTest == 0){
+                    alert("Even");
+                }else{
+                    alert("Odd");
+                }
                 /* TODO 3
                  *
                  * Fill in this function so that it shows an
